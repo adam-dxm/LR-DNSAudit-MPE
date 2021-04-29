@@ -1,0 +1,143 @@
+<?xml version="1.0" standalone="yes"?>
+<RuleDataset>
+  <ExportInfo>
+    <ExportConsoleVersion>7.7.0.0</ExportConsoleVersion>
+    <KBVersion>7.1.587.0</KBVersion>
+    <DateExported>2021-03-05T02:32:33.7075346+00:00</DateExported>
+    <ExportLicense>646</ExportLicense>
+    <ExportUser>MAIDO\adm_adamt</ExportUser>
+  </ExportInfo>
+  <MPERule>
+    <MPERuleID>1000000117</MPERuleID>
+    <MPERuleRegexID>1000000019</MPERuleRegexID>
+    <RuleStatus>2</RuleStatus>
+    <StatusName>Test</StatusName>
+    <CommonEventID>1030740</CommonEventID>
+    <CommonEventName>Dns Update Successful</CommonEventName>
+    <MsgClassID>1140</MsgClassID>
+    <Name>EVID 519/520</Name>
+    <FullName>EVID 519/520</FullName>
+    <BaseRule>1</BaseRule>
+    <ShortDesc>EVID 519 is logged when a record is created/updated. 
+EVID 520 is logged when a record is deleted. 
+The Object Type field tells us what type of DNS record was affected. These are mostly defined in RFC1035
+1 = 'A' (host) record.
+2 = 'NS' (nameserver) r</ShortDesc>
+    <DefMsgTTL>32</DefMsgTTL>
+    <DefMsgArchiveMode>2</DefMsgArchiveMode>
+    <DefMsgArchiveModeBool>true</DefMsgArchiveModeBool>
+    <DefForwarding>0</DefForwarding>
+    <DefForwardingBool>false</DefForwardingBool>
+    <DefRiskRating>0</DefRiskRating>
+    <DefFalseAlarmRating>0</DefFalseAlarmRating>
+    <InheritTech>1</InheritTech>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:41:16.873+00:00</DateUpdated>
+    <SortOrder>1</SortOrder>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+    <SHostIs>0</SHostIs>
+    <DHostIs>0</DHostIs>
+    <ServiceIs>0</ServiceIs>
+    <HostContext>0</HostContext>
+    <PrefixBaseRuleName>0</PrefixBaseRuleName>
+    <IsSystemRule>No</IsSystemRule>
+    <NewRuleRecordType>0</NewRuleRecordType>
+    <DefLogMartMode>13627390</DefLogMartMode>
+  </MPERule>
+  <MPERule>
+    <MPERuleID>1000000173</MPERuleID>
+    <MPERuleRegexID>1000000019</MPERuleRegexID>
+    <RuleStatus>2</RuleStatus>
+    <StatusName>Test</StatusName>
+    <CommonEventID>1030740</CommonEventID>
+    <CommonEventName>Dns Update Successful</CommonEventName>
+    <MsgClassID>1140</MsgClassID>
+    <Name>EVID 520: Record Deleted</Name>
+    <FullName>EVID 520: Record Deleted</FullName>
+    <BaseRule>0</BaseRule>
+    <ShortDesc>EVID 520 is logged when a record is deleted. 
+The Object Type field tells us what type of DNS record was affected. These are mostly defined in RFC1035.</ShortDesc>
+    <LongDesc>EVID 520 is logged when a record is deleted. 
+The Object Type field tells us what type of DNS record was affected. These are mostly defined in RFC1035
+1 = 'A' (host) record.
+2 = 'NS' (nameserver) record.
+5 = 'CNAME' (alias) record.
+6 = 'SOA' (start of authority) record. 
+12 = 'PTR' (reverse lookup pointer) record.
+15 = 'MX' (mail exchange) record.
+16 = 'TXT' (Text) records, including SPF, DKIM, DMARC.
+28 = 'AAAA' (IPv6 host) record.
+33 = 'SRV' (service) record.</LongDesc>
+    <DefMsgTTL>32</DefMsgTTL>
+    <DefMsgArchiveMode>2</DefMsgArchiveMode>
+    <DefMsgArchiveModeBool>true</DefMsgArchiveModeBool>
+    <DefForwarding>0</DefForwarding>
+    <DefForwardingBool>false</DefForwardingBool>
+    <DefRiskRating>0</DefRiskRating>
+    <DefFalseAlarmRating>0</DefFalseAlarmRating>
+    <MapTag1>=DYNAMIC_UPDATE</MapTag1>
+    <MapTag2>*</MapTag2>
+    <InheritTech>1</InheritTech>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-01-05T16:02:19.22+00:00</DateUpdated>
+    <SortOrder>1</SortOrder>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+    <SHostIs>0</SHostIs>
+    <DHostIs>0</DHostIs>
+    <ServiceIs>0</ServiceIs>
+    <HostContext>0</HostContext>
+    <PrefixBaseRuleName>0</PrefixBaseRuleName>
+    <IsSystemRule>No</IsSystemRule>
+    <NewRuleRecordType>0</NewRuleRecordType>
+    <MapVMID>=520</MapVMID>
+    <MapSIP>*</MapSIP>
+    <MapDName>*</MapDName>
+    <MapLogin>*</MapLogin>
+    <MapObject>*</MapObject>
+    <MapBytesIn>*</MapBytesIn>
+    <MapBytesOut>*</MapBytesOut>
+    <MapDuration>*</MapDuration>
+    <DefLogMartMode>13627389</DefLogMartMode>
+  </MPERule>
+  <MPERuleRegex>
+    <MPERuleRegexID>1000000019</MPERuleRegexID>
+    <RegexTagged>(?=Provider name=\'Microsoft-Windows-DNSServer')Provider name=\'Microsoft-Windows-DNSServer'(\sGUID=\'\{eb79061a-[^\}]+\}\')?/\&gt;\&lt;EventID\&gt;(?&lt;vmid&gt;5((19)|(20)))\&lt;/EventID\&gt;\&lt;Version\&gt;\d*\&lt;/Version\&gt;\&lt;level\&gt;(?&lt;severity&gt;[^\&lt;]+)\&lt;/level\&gt;\&lt;Task\&gt;(?&lt;tag1&gt;(?&lt;vendorinfo&gt;[^\&lt;]+))\&lt;/Task\&gt;\&lt;Opcode\&gt;\w+\&lt;/Opcode\&gt;\&lt;Keywords\&gt;(?&lt;tag2&gt;.*)\&lt;/Keywords\&gt;\&lt;TimeCreated[^\&gt;]+\&gt;\&lt;EventRecordID\&gt;\d+\&lt;/EventRecordId\&gt;\&lt;Correlation/\&gt;\&lt;Execution ProcessID=\'(?&lt;processid&gt;\d+)\' ThreadID=\'\d+\'/\&gt;\&lt;Channel\&gt;Microsoft-Windows-DNSServer/Audit\&lt;/Channel\&gt;\&lt;Computer\&gt;(?&lt;dname&gt;[^\&lt;]+)\&lt;/Computer\&gt;\&lt;Security UserID=\'(?&lt;domainorigin&gt;[^\\]+)\\(?&lt;login&gt;[^\']+)\'/\&gt;\&lt;/System\&gt;\&lt;EventData\&gt;\&lt;Data Name='Type'\&gt;(?&lt;objecttype&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='NAME'\&gt;(?&lt;objectname&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='TTL'\&gt;&lt;seconds&gt;\&lt;/Data\&gt;\&lt;Data Name='BufferSize'\&gt;&lt;bytes&gt;\&lt;/Data\&gt;\&lt;Data Name='RDATA'\&gt;(?&lt;object&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='Zone'\&gt;(?&lt;domainimpacted&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='ZoneScope'\&gt;(?&lt;sessiontype&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='Source'\&gt;&lt;sip&gt;\&lt;</RegexTagged>
+    <IgnoreCase>1</IgnoreCase>
+    <Multiline>0</Multiline>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:41:16.863+00:00</DateUpdated>
+    <PerfMonMode>1</PerfMonMode>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+  </MPERuleRegex>
+  <MPERuleToMST>
+    <MsgSourceTypeID>1000000005</MsgSourceTypeID>
+    <MPERuleRegexID>1000000019</MPERuleRegexID>
+    <SortOrder>1</SortOrder>
+    <AutoSort>0</AutoSort>
+  </MPERuleToMST>
+  <CommonEvent>
+    <CommonEventID>1030740</CommonEventID>
+    <MsgClassID>1140</MsgClassID>
+    <Name>Dns Update Successful</Name>
+    <ShortDesc />
+    <DefRiskRating>0</DefRiskRating>
+    <DateUpdated>2020-10-22T18:48:35.987+01:00</DateUpdated>
+    <RecordStatus>1</RecordStatus>
+  </CommonEvent>
+  <MsgSourceType>
+    <MsgSourceTypeID>1000000005</MsgSourceTypeID>
+    <Name>MS Win Event Log XML - DNSServer Audit</Name>
+    <FullName>MS Win Event Log XML - DNSServer Audit</FullName>
+    <Abbreviation>WinEvtX - DNSAudit</Abbreviation>
+    <ShortDesc>Microsoft-Windows-DNSServer/Audit</ShortDesc>
+    <LongDesc />
+    <ParentMsgSourceTypeID>1000000000</ParentMsgSourceTypeID>
+    <IsMst>1</IsMst>
+    <DateUpdated>2020-11-19T13:05:06.493+00:00</DateUpdated>
+    <MsgSourceFormat>28</MsgSourceFormat>
+    <RecordStatus>1</RecordStatus>
+  </MsgSourceType>
+</RuleDataset>

@@ -1,0 +1,133 @@
+<?xml version="1.0" standalone="yes"?>
+<RuleDataset>
+  <ExportInfo>
+    <ExportConsoleVersion>7.7.0.0</ExportConsoleVersion>
+    <KBVersion>7.1.587.0</KBVersion>
+    <DateExported>2021-03-05T01:56:40.164291+00:00</DateExported>
+    <ExportLicense>646</ExportLicense>
+    <ExportUser>MAIDO\adm_adamt</ExportUser>
+  </ExportInfo>
+  <MPERule>
+    <MPERuleID>1000000216</MPERuleID>
+    <MPERuleRegexID>1000000057</MPERuleRegexID>
+    <RuleStatus>2</RuleStatus>
+    <StatusName>Test</StatusName>
+    <CommonEventID>2547</CommonEventID>
+    <CommonEventName>General DNS Server Information</CommonEventName>
+    <MsgClassID>3400</MsgClassID>
+    <Name>DNS Online Signing</Name>
+    <FullName>DNS Online Signing</FullName>
+    <BaseRule>1</BaseRule>
+    <DefMsgTTL>32</DefMsgTTL>
+    <DefMsgArchiveMode>2</DefMsgArchiveMode>
+    <DefMsgArchiveModeBool>true</DefMsgArchiveModeBool>
+    <DefForwarding>1</DefForwarding>
+    <DefForwardingBool>true</DefForwardingBool>
+    <DefRiskRating>0</DefRiskRating>
+    <DefFalseAlarmRating>0</DefFalseAlarmRating>
+    <InheritTech>1</InheritTech>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:56:05.897+00:00</DateUpdated>
+    <SortOrder>1</SortOrder>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+    <SHostIs>0</SHostIs>
+    <DHostIs>0</DHostIs>
+    <ServiceIs>0</ServiceIs>
+    <HostContext>0</HostContext>
+    <PrefixBaseRuleName>0</PrefixBaseRuleName>
+    <IsSystemRule>No</IsSystemRule>
+    <NewRuleRecordType>0</NewRuleRecordType>
+    <DefLogMartMode>13627391</DefLogMartMode>
+  </MPERule>
+  <MPERule>
+    <MPERuleID>1000000217</MPERuleID>
+    <MPERuleRegexID>1000000057</MPERuleRegexID>
+    <RuleStatus>2</RuleStatus>
+    <StatusName>Test</StatusName>
+    <CommonEventID>1032397</CommonEventID>
+    <CommonEventName>Object Deleted/Removed</CommonEventName>
+    <MsgClassID>1060</MsgClassID>
+    <Name>EVID 526: Zone Unsigned</Name>
+    <FullName>EVID 526: Zone Unsigned</FullName>
+    <BaseRule>0</BaseRule>
+    <ShortDesc>The DNS zone has been un-signed (the DNSSEC signature has been removed).</ShortDesc>
+    <LongDesc />
+    <DefMsgTTL>32</DefMsgTTL>
+    <DefMsgArchiveMode>2</DefMsgArchiveMode>
+    <DefMsgArchiveModeBool>true</DefMsgArchiveModeBool>
+    <DefForwarding>1</DefForwarding>
+    <DefForwardingBool>true</DefForwardingBool>
+    <DefRiskRating>0</DefRiskRating>
+    <DefFalseAlarmRating>0</DefFalseAlarmRating>
+    <MapTag1>*</MapTag1>
+    <MapTag2>*</MapTag2>
+    <InheritTech>1</InheritTech>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:56:05.9+00:00</DateUpdated>
+    <SortOrder>1</SortOrder>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+    <SHostIs>0</SHostIs>
+    <DHostIs>0</DHostIs>
+    <ServiceIs>0</ServiceIs>
+    <HostContext>0</HostContext>
+    <PrefixBaseRuleName>0</PrefixBaseRuleName>
+    <IsSystemRule>No</IsSystemRule>
+    <NewRuleRecordType>0</NewRuleRecordType>
+    <MapVMID>=526</MapVMID>
+    <MapDName>*</MapDName>
+    <MapLogin>*</MapLogin>
+    <MapDuration>*</MapDuration>
+    <MapQuantity>*</MapQuantity>
+    <DefLogMartMode>765951</DefLogMartMode>
+  </MPERule>
+  <MPERuleRegex>
+    <MPERuleRegexID>1000000057</MPERuleRegexID>
+    <RegexTagged>(?=Provider name=\'Microsoft-Windows-DNSServer')Provider name=\'Microsoft-Windows-DNSServer'(\sGUID=\'\{eb79061a-[^\}]+\}\')?/\&gt;\&lt;EventID\&gt;(?&lt;vmid&gt;\d+)\&lt;/EventID\&gt;\&lt;Version\&gt;\d*\&lt;/Version\&gt;\&lt;level\&gt;(?&lt;severity&gt;[^\&lt;]+)\&lt;/level\&gt;\&lt;Task\&gt;(?&lt;tag1&gt;(?&lt;vendorinfo&gt;onlinesigning))\&lt;/Task\&gt;\&lt;Opcode\&gt;\w+\&lt;/Opcode\&gt;\&lt;Keywords\&gt;(?&lt;tag2&gt;.*)\&lt;/Keywords\&gt;\&lt;TimeCreated[^\&gt;]+\&gt;\&lt;EventRecordID\&gt;\d+\&lt;/EventRecordId\&gt;\&lt;Correlation/\&gt;\&lt;Execution ProcessID=\'(?&lt;processid&gt;\d+)\' ThreadID=\'\d+\'/\&gt;\&lt;Channel\&gt;Microsoft-Windows-DNSServer/Audit\&lt;/Channel\&gt;\&lt;Computer\&gt;(?&lt;dname&gt;[^\&lt;]+)\&lt;/Computer\&gt;\&lt;Security UserID=\'(?&lt;domainorigin&gt;[^\\]+)\\(?&lt;login&gt;[^\']+)\'/\&gt;\&lt;/System\&gt;\&lt;EventData\&gt;\&lt;Data Name=\'Zone(name)?\'\&gt;(?&lt;domainimpacted&gt;[^\&lt;]*)\&lt;/Data\&gt;(\&lt;Data Name=\'DenialOfExistence\'\&gt;[^\&lt;]*\&lt;/Data\&gt;\&lt;Data Name=\'DistributeTrustAnchor\'\&gt;[^\&lt;]*\&lt;/Data\&gt;\&lt;Data Name=\'DnsKeyRecordSetTtl\'\&gt;(?&lt;seconds&gt;\d*)\&lt;/Data\&gt;\&lt;Data Name=\'DSRecordGenerationAlgorithm\'\&gt;(?&lt;objecttype&gt;[^\&lt;]*)\&lt;/Data\&gt;\&lt;Data Name=\'DSRecordSetTtl\'\&gt;\d*\&lt;/Data\&gt;\&lt;Data Name=\'EnableRfc5011KeyRollover\'\&gt;[^\&lt;]*\&lt;/Data\&gt;\&lt;Data Name=\'IsKeyMasterServer\'\&gt;[^\&lt;]*\&lt;/Data\&gt;\&lt;Data Name=\'KeyMasterServer\'\&gt;(?&lt;dname&gt;[^\&lt;]+)?\&lt;/Data\&gt;\&lt;Data Name=\'NSec3HashAlgorithm\'\&gt;[^\&lt;]*\&lt;/Data\&gt;\&lt;Data Name=\'NSec3Iterations\'\&gt;&lt;quantity&gt;\&lt;/Data\&gt;)?</RegexTagged>
+    <IgnoreCase>1</IgnoreCase>
+    <Multiline>0</Multiline>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:56:05.887+00:00</DateUpdated>
+    <PerfMonMode>1</PerfMonMode>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+  </MPERuleRegex>
+  <MPERuleToMST>
+    <MsgSourceTypeID>1000000005</MsgSourceTypeID>
+    <MPERuleRegexID>1000000057</MPERuleRegexID>
+    <SortOrder>6</SortOrder>
+    <AutoSort>0</AutoSort>
+  </MPERuleToMST>
+  <CommonEvent>
+    <CommonEventID>2547</CommonEventID>
+    <MsgClassID>3400</MsgClassID>
+    <Name>General DNS Server Information</Name>
+    <ShortDesc />
+    <DefRiskRating>0</DefRiskRating>
+    <DateUpdated>2020-10-22T18:48:35.987+01:00</DateUpdated>
+    <RecordStatus>1</RecordStatus>
+  </CommonEvent>
+  <CommonEvent>
+    <CommonEventID>1032397</CommonEventID>
+    <MsgClassID>1060</MsgClassID>
+    <Name>Object Deleted/Removed</Name>
+    <ShortDesc />
+    <DefRiskRating>0</DefRiskRating>
+    <DateUpdated>2020-10-22T18:48:35.987+01:00</DateUpdated>
+    <RecordStatus>1</RecordStatus>
+  </CommonEvent>
+  <MsgSourceType>
+    <MsgSourceTypeID>1000000005</MsgSourceTypeID>
+    <Name>MS Win Event Log XML - DNSServer Audit</Name>
+    <FullName>MS Win Event Log XML - DNSServer Audit</FullName>
+    <Abbreviation>WinEvtX - DNSAudit</Abbreviation>
+    <ShortDesc>Microsoft-Windows-DNSServer/Audit</ShortDesc>
+    <LongDesc />
+    <ParentMsgSourceTypeID>1000000000</ParentMsgSourceTypeID>
+    <IsMst>1</IsMst>
+    <DateUpdated>2020-11-19T13:05:06.493+00:00</DateUpdated>
+    <MsgSourceFormat>28</MsgSourceFormat>
+    <RecordStatus>1</RecordStatus>
+  </MsgSourceType>
+</RuleDataset>

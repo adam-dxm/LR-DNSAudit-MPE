@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes"?>
+<RuleDataset>
+  <ExportInfo>
+    <ExportConsoleVersion>7.7.0.0</ExportConsoleVersion>
+    <KBVersion>7.1.587.0</KBVersion>
+    <DateExported>2021-03-05T02:33:32.8071786+00:00</DateExported>
+    <ExportLicense>646</ExportLicense>
+    <ExportUser>MAIDO\adm_adamt</ExportUser>
+  </ExportInfo>
+  <MPERule>
+    <MPERuleID>1000000118</MPERuleID>
+    <MPERuleRegexID>1000000020</MPERuleRegexID>
+    <RuleStatus>2</RuleStatus>
+    <StatusName>Test</StatusName>
+    <CommonEventID>1022593</CommonEventID>
+    <CommonEventName>DNS Server Zone Saved</CommonEventName>
+    <MsgClassID>3400</MsgClassID>
+    <Name>EVID 512 - Zone Created</Name>
+    <FullName>EVID 512 - Zone Created</FullName>
+    <BaseRule>1</BaseRule>
+    <DefMsgTTL>32</DefMsgTTL>
+    <DefMsgArchiveMode>2</DefMsgArchiveMode>
+    <DefMsgArchiveModeBool>true</DefMsgArchiveModeBool>
+    <DefForwarding>1</DefForwarding>
+    <DefForwardingBool>true</DefForwardingBool>
+    <DefRiskRating>0</DefRiskRating>
+    <DefFalseAlarmRating>0</DefFalseAlarmRating>
+    <InheritTech>1</InheritTech>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:41:16.883+00:00</DateUpdated>
+    <SortOrder>1</SortOrder>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+    <SHostIs>0</SHostIs>
+    <DHostIs>0</DHostIs>
+    <ServiceIs>0</ServiceIs>
+    <HostContext>0</HostContext>
+    <PrefixBaseRuleName>0</PrefixBaseRuleName>
+    <IsSystemRule>No</IsSystemRule>
+    <NewRuleRecordType>0</NewRuleRecordType>
+    <DefLogMartMode>13627389</DefLogMartMode>
+  </MPERule>
+  <MPERuleRegex>
+    <MPERuleRegexID>1000000020</MPERuleRegexID>
+    <RegexTagged>(?=Provider name=\'Microsoft-Windows-DNSServer')Provider name=\'Microsoft-Windows-DNSServer'(\sGUID=\'\{eb79061a-[^\}]+\}\')?/\&gt;\&lt;EventID\&gt;(?&lt;vmid&gt;512)\&lt;/EventID\&gt;\&lt;Version\&gt;\d*\&lt;/Version\&gt;\&lt;level\&gt;(?&lt;severity&gt;[^\&lt;]+)\&lt;/level\&gt;\&lt;Task\&gt;(?&lt;vendorinfo&gt;ZONE_OP)\&lt;/Task\&gt;\&lt;Opcode\&gt;\w+\&lt;/Opcode\&gt;\&lt;Keywords\&gt;(?&lt;tag2&gt;.*)\&lt;/Keywords\&gt;\&lt;TimeCreated[^\&gt;]+\&gt;\&lt;EventRecordID\&gt;\d+\&lt;/EventRecordId\&gt;\&lt;Correlation/\&gt;\&lt;Execution ProcessID=\'(?&lt;processid&gt;\d+)\' ThreadID=\'\d+\'/\&gt;\&lt;Channel\&gt;Microsoft-Windows-DNSServer/Audit\&lt;/Channel\&gt;\&lt;Computer\&gt;(?&lt;dname&gt;[^\&lt;]+)\&lt;/Computer\&gt;\&lt;Security UserID=\'(?&lt;domainorigin&gt;[^\\]+)\\(?&lt;login&gt;[^\']+)\'/\&gt;\&lt;/System\&gt;\&lt;EventData\&gt;\&lt;Data Name=\'Name\'\&gt;(?&lt;objectname&gt;(?&lt;domainimpacted&gt;[^\&lt;]+))\&lt;/Data\&gt;\&lt;Data Name='Type'\&gt;(?&lt;objecttype&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='Lookup'\&gt;(?&lt;subject&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='ReplicationScope'\&gt;(?&lt;group&gt;[^\&lt;]+)\&lt;/Data\&gt;\&lt;Data Name='ZoneFile'&gt;(?&lt;object&gt;[^\&lt;]+)\&lt;</RegexTagged>
+    <IgnoreCase>1</IgnoreCase>
+    <Multiline>0</Multiline>
+    <RecordStatus>1</RecordStatus>
+    <DateUpdated>2021-03-05T01:41:16.883+00:00</DateUpdated>
+    <PerfMonMode>1</PerfMonMode>
+    <VersionMajor>4</VersionMajor>
+    <VersionMinor>1</VersionMinor>
+  </MPERuleRegex>
+  <MPERuleToMST>
+    <MsgSourceTypeID>1000000005</MsgSourceTypeID>
+    <MPERuleRegexID>1000000020</MPERuleRegexID>
+    <SortOrder>2</SortOrder>
+    <AutoSort>0</AutoSort>
+  </MPERuleToMST>
+  <CommonEvent>
+    <CommonEventID>1022593</CommonEventID>
+    <MsgClassID>3400</MsgClassID>
+    <Name>DNS Server Zone Saved</Name>
+    <ShortDesc />
+    <DefRiskRating>0</DefRiskRating>
+    <DateUpdated>2020-10-22T18:48:35.987+01:00</DateUpdated>
+    <RecordStatus>1</RecordStatus>
+  </CommonEvent>
+  <MsgSourceType>
+    <MsgSourceTypeID>1000000005</MsgSourceTypeID>
+    <Name>MS Win Event Log XML - DNSServer Audit</Name>
+    <FullName>MS Win Event Log XML - DNSServer Audit</FullName>
+    <Abbreviation>WinEvtX - DNSAudit</Abbreviation>
+    <ShortDesc>Microsoft-Windows-DNSServer/Audit</ShortDesc>
+    <LongDesc />
+    <ParentMsgSourceTypeID>1000000000</ParentMsgSourceTypeID>
+    <IsMst>1</IsMst>
+    <DateUpdated>2020-11-19T13:05:06.493+00:00</DateUpdated>
+    <MsgSourceFormat>28</MsgSourceFormat>
+    <RecordStatus>1</RecordStatus>
+  </MsgSourceType>
+</RuleDataset>
